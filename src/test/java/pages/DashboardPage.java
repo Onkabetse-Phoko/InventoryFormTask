@@ -13,7 +13,6 @@ public class DashboardPage {
     WebDriver driver;
 
     //@FindBy is used to locate the Dashboard button on the page using its XPath.
-    // The XPath expression "//span[text()='Dashboard']" is used to find a <span> element that contains the text "Dashboard".
     // This allows Selenium to interact with the Dashboard button in the web application.
     @FindBy(xpath = "//*[@id=\"app-root\"]/nav/div[1]/div[2]/div[1]/button/span[2]")
     WebElement learnButton;

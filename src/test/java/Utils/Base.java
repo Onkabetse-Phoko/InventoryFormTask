@@ -6,7 +6,6 @@ import pages.DashboardPage;
 import pages.HomePage;
 import pages.InventoryFormPage;
 import pages.LoginPage;
-import Utils.BrowserFactory;
 
 public class Base {
     BrowserFactory browserFactory = new BrowserFactory();
@@ -19,14 +18,5 @@ public class Base {
     public InventoryFormPage inventoryFormPage = PageFactory.initElements(driver, InventoryFormPage.class);
     public TakeScreenshots takeScreenshots = new TakeScreenshots();
 
-//    ReadData readData;
-//
-//    {
-//        try {
-//            readData = new ReadData();
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
 
 }
