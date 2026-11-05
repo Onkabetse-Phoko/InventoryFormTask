@@ -2,7 +2,9 @@ package Utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import pages.DashboardPage;
 import pages.HomePage;
+import pages.InventoryFormPage;
 import pages.LoginPage;
 import Utils.BrowserFactory;
 
@@ -13,7 +15,8 @@ public class Base {
 
     public HomePage homepage = PageFactory.initElements(driver, HomePage.class);
     public LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
-    //public LandingPage landingPage = PageFactory.initElements(driver, LandingPage.class);
+    public DashboardPage dashboardPage = PageFactory.initElements(driver, DashboardPage.class);
+    public InventoryFormPage inventoryFormPage = PageFactory.initElements(driver, InventoryFormPage.class);
     public TakeScreenshots takeScreenshots = new TakeScreenshots();
 
 //    ReadData readData;

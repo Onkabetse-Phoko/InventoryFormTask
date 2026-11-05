@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class LoginTests extends Base {
     @Test
-    public void validLoginTest() {
+    public void validLoginTest() throws InterruptedException {
         //takeSnapshots is a method in the TakeScreenshots class that
         // takes a screenshot of the current page and saves it to the specified location and will be named "BeforeLogin"
         takeScreenshots.takeSnapShot(driver, "BeforeLogin");
@@ -15,12 +15,24 @@ public class LoginTests extends Base {
         loginPage.enterUsername("mphoonka@gmail.com");
         loginPage.enterPassword("Phoko@!101");
         loginPage.clickLoginSubmitButton();
-        //landingPage.verifyLoginSuccess();
         takeScreenshots.takeSnapShot(driver, "AfterLogin");
-//        landingPage.clickMenuButton();
-//        landingPage.clickLogoutButton();
-//        landingPage.acceptAlert();
-
+        dashboardPage.clickLearnButton();
+        dashboardPage.clickLearningMaterialsButton();
+        dashboardPage.clickWebTabButton();
+        inventoryFormPage.clickDeviceType();
+        inventoryFormPage.chooseBrand();
+        inventoryFormPage.chooseStorage();
+        inventoryFormPage.chooseColor();
+        inventoryFormPage.chooseQuantity(2);
+        inventoryFormPage.enterAddress("123 Silverpine Avenue, Northcliff, Johannesburg");
+        inventoryFormPage.clickNextButton();
+        inventoryFormPage.chooseShippingMethod();
+        inventoryFormPage.chooseWarranty();
+        inventoryFormPage.enterDiscountCode("SAVE10");
+        inventoryFormPage.clickApplyDiscountButton();
+        inventoryFormPage.clickConfirmButton();
+        inventoryFormPage.clickViewInvoice();
+        inventoryFormPage.clickViewInvoiceDetails();
 
     }
 

@@ -27,10 +27,9 @@ public class BrowserFactory {
         } else {
             driver = new EdgeDriver();
         }
-        // driver.manage().window().maximize();
+
         driver.get(url);
-        //dimension is used to set the size of the browser window to 1920 pixels wide and 1080 pixels tall.
-        driver.manage().window().setSize(new Dimension(1920,1080));
+        driver.manage().window().maximize();
         return driver;
     }
 }
