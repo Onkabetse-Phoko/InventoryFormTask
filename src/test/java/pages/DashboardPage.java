@@ -21,7 +21,7 @@ public class DashboardPage {
     WebElement learningMaterialsButton;
 
     @FindBy(id = "tab-btn-web")
-    WebElement webTabButton;
+    WebElement webAutoAdvanceButton;
 
     //constructor to initialize the WebDriver instance for the DashboardPage class
     public DashboardPage(WebDriver driver) {
@@ -35,7 +35,7 @@ public class DashboardPage {
         new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOf(learningMaterialsButton));
         learningMaterialsButton.click();
     }
-    public void clickWebTabButton() {
-        webTabButton.click();
+    public void clickAutoAdvanceButton() {
+        webAutoAdvanceButton.click();
     }
 }

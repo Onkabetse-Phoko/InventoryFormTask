@@ -18,7 +18,7 @@ public class LoginTests extends Base {
         takeScreenshots.takeSnapShot(driver, "AfterLogin");
         dashboardPage.clickLearnButton();
         dashboardPage.clickLearningMaterialsButton();
-        dashboardPage.clickWebTabButton();
+        dashboardPage.clickAutoAdvanceButton();
         takeScreenshots.takeSnapShot(driver, "Inventory Form");
         inventoryFormPage.clickDeviceType();
         inventoryFormPage.chooseBrand();
