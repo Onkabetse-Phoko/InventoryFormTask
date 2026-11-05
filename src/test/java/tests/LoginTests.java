@@ -19,6 +19,7 @@ public class LoginTests extends Base {
         dashboardPage.clickLearnButton();
         dashboardPage.clickLearningMaterialsButton();
         dashboardPage.clickWebTabButton();
+        takeScreenshots.takeSnapShot(driver, "Inventory Form");
         inventoryFormPage.clickDeviceType();
         inventoryFormPage.chooseBrand();
         inventoryFormPage.chooseStorage();
@@ -37,9 +38,11 @@ public class LoginTests extends Base {
     }
 
     @AfterTest
-    public void tearDown() {
+    public void tearDown() throws InterruptedException {
         if (driver != null) {
+            Thread.sleep(3000); // Wait for 3 seconds before quitting the driver
             driver.quit();
+
         }
     }
 }

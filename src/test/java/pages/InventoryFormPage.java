@@ -64,6 +64,7 @@ public class InventoryFormPage {
         chooseBrand.click();
     }
     public void chooseStorage() {
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(chooseStorage));
         chooseStorage.click();
     }
     public void chooseColor() {
@@ -75,8 +76,7 @@ public class InventoryFormPage {
     }
 
     public void enterAddress(String address) {
-        //WebDriverWait is used to wait for the address field to be visible before sending keys to it
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOf(addressField));
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(addressField));
         addressField.sendKeys(address);
     }
     public void clickNextButton() {
@@ -96,15 +96,15 @@ public class InventoryFormPage {
         applyDiscountButton.click();
     }
     public void clickConfirmButton() {
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOf(confirmButton));
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(confirmButton));
         confirmButton.click();
     }
     public void clickViewInvoice() {
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOf(viewInvoice));
+        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(viewInvoice));
         viewInvoice.click();
     }
     public void clickViewInvoiceDetails() {
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOf(viewInvoiceDetails));
+        //new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOf(viewInvoiceDetails));
         viewInvoiceDetails.click();
     }
 
